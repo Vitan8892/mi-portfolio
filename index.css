@@ -15,7 +15,7 @@
 
 html, 
 body {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-image: url(./Images/bg2.png);
 }
@@ -27,6 +27,7 @@ nav {
     position: fixed;
     align-items: center;
     justify-content: space-around;
+    z-index: 100;
     background-color: var(--varPurple);
     border: 1px solid var(--solidPink);
     border-radius: 0 0 1rem 1rem;
@@ -43,6 +44,7 @@ nav {
 }
 
 #contenedor-home {
+   
     width: 100%;
     height: 100%;
     display: flex;
@@ -53,20 +55,12 @@ nav {
     text-align: center;
 }
 
-
-
-
-
 .perfil {
-    position: absolute;
     background-color: var(--blueTrans);
     padding: 40px;
-    border-radius: 3rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
     user-select: none;
-border-radius: 50px;
-
 }
 .profileImg {
     position: relative;
@@ -144,10 +138,102 @@ h1 {
 
 #contenedor-projects {
     width: 100%;
-    min-height: 100%;
+    padding: 50px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     background-color: var(--bgPink);
-    color: var(--lightPink);
+    color: azure;
+    text-shadow: rgb(255, 0, 179) 1px 0 10px;
 }
+.Tproject {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    color: var(--lightPink);
+    text-shadow: 6px 6px 6px rgba(255, 255, 255, 0.473);
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.project { 
+    min-width: 320px;
+    max-width: 700px;
+    width: 25%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    position: relative;
+    /*overflow: hidden;*/
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    border: 1px solid var(--solidPink); 
+    
+}
+
+.project:hover {
+    filter: none;
+}
+.project:first-of-type {
+    border-radius: 1rem 0 0 1rem;
+}
+.project:last-of-type {
+    border-radius: 0 1rem 1rem 0;
+}
+
+.hproject {
+    width: 400px;
+    padding-bottom: 60px;
+}
+
+.pproject {
+    font-size: 30px;
+}
+
+.aproject {
+    text-decoration: none;
+    background-color: var(--blueTrans);
+    border: 2px solid var(--varPurple);
+    border-radius: 1rem;
+    padding: .5rem 1rem;
+    font-size: 16px;
+    position: absolute;
+    right: 50px;
+    bottom: 40px;
+    background-size: cover;
+}
+.aproject:hover {
+    background-color: var(--lightPinkTrans);
+
+}
+
+.memoTest {
+    background-image: url(./Images/memoPV.png);
+    
+}
+
+.toDoList {
+    background-image: url(./Images/toDoListPV.png);
+}
+
+.pokeAPI {
+    background-image: url(./Images/pokePV.png);
+}
+ .more {
+    background-image: url(./Images/bg1.jpg);
+ }
+
+
 
 /*/////////////// CONTACTO //////////////////*/
 #contenedor-contact {
@@ -268,6 +354,7 @@ button:hover {
     
 }
 
+
 /*///////////////////////////////////////////*/
 
 footer {
@@ -279,3 +366,16 @@ footer {
     padding: 20px;
 }
 
+@media(max-width:400px) {
+    .box {
+        display: flex;
+        flex-wrap: wrap;
+    }
+.project { 
+    width: 400px;
+    height: 25%;
+}
+.redes {
+ flex-wrap: wrap;
+}
+}
