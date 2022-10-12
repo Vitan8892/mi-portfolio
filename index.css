@@ -1,0 +1,389 @@
+:root {
+    --bgPink: #b9009183;
+    --varPurple: #9000ff65;
+    --solidPink: #B90090;
+    --lightPink: #FEB9EF;
+    --lightPinkTrans: #feb9ef6c;
+    --blueTrans: #0400ff4b;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, 
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./Images/bg2.png);
+}
+
+nav {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 100;
+    background-color: var(--varPurple);
+    border: 1px solid var(--solidPink);
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 2px 6px 4px rgba(0, 0, 0, 0.25);
+}
+
+.bar { 
+    width: 25px;
+    padding-top: 5px;
+}
+
+.bar:hover {
+    box-shadow: 0px 6px 6px rgba(255, 255, 255, 0.473);
+}
+
+#contenedor-home {
+   
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bgPink);
+    color: var(--lightPink);
+    text-align: center;
+}
+
+.perfil {
+    background-color: var(--blueTrans);
+    padding: 40px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    user-select: none;
+}
+.profileImg {
+    position: relative;
+    border-radius: 500px;
+    height: 200px;
+    border: 2px solid var(--solidPink);
+}
+
+h1 {
+    font-size: 80px;
+}
+
+/*//////////////// SOBRE MI ////////////////*/
+
+#contenedor-aboutMe {
+    width: 100%;
+    min-height: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blueTrans);
+    font-size: 20px;
+}
+
+.me {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: var(--lightPink);
+    text-shadow: 6px 6px 6px rgba(255, 255, 255, 0.473);
+}
+
+.aboutMe,
+.aboutMe-aptitude,
+.aboutMe-curso {
+    background-color: var(--bgPink);
+    color: var(--lightPink);
+    padding: 20px;
+    margin: 40px;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.aptitude-icon {
+    width: 40px;
+    margin: 40px 30px 0 30px;
+}
+
+.aboutMe > h2,
+.aboutMe-aptitude > h2,
+.aboutMe-curso > h2 {
+    font-size: 40px;
+    font-weight: 700;
+    text-decoration: underline;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-bottom: 40px;
+
+}
+
+.aboutMe-aptitude {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+}
+.aboutMe {
+    width: 600px;
+}
+
+/*/////////////// PROYECTOS //////////////////*/
+
+#contenedor-projects {
+    width: 100%;
+    padding: 50px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bgPink);
+    color: azure;
+    text-shadow: rgb(255, 0, 179) 1px 0 10px;
+}
+.Tproject {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    color: var(--lightPink);
+    text-shadow: 6px 6px 6px rgba(255, 255, 255, 0.473);
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.project { 
+    min-width: 320px;
+    max-width: 700px;
+    width: 25%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    position: relative;
+    /*overflow: hidden;*/
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    border: 1px solid var(--solidPink); 
+    
+}
+
+.project:hover {
+    filter: none;
+}
+.project:first-of-type {
+    border-radius: 1rem 0 0 1rem;
+}
+.project:last-of-type {
+    border-radius: 0 1rem 1rem 0;
+}
+
+.hproject {
+    width: 400px;
+    padding-bottom: 60px;
+}
+
+.pproject {
+    font-size: 30px;
+}
+
+.aproject {
+    text-decoration: none;
+    background-color: var(--blueTrans);
+    border: 2px solid var(--varPurple);
+    border-radius: 1rem;
+    padding: .5rem 1rem;
+    font-size: 16px;
+    position: absolute;
+    right: 50px;
+    bottom: 40px;
+    background-size: cover;
+}
+.aproject:hover {
+    background-color: var(--lightPinkTrans);
+
+}
+
+.memoTest {
+    background-image: url(./Images/memoPV.png);
+    
+}
+
+.toDoList {
+    background-image: url(./Images/toDoListPV.png);
+}
+
+.pokeAPI {
+    background-image: url(./Images/pokePV.png);
+}
+ .more {
+    background-image: url(./Images/bg1.jpg);
+ }
+
+
+
+/*/////////////// CONTACTO //////////////////*/
+#contenedor-contact {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--blueTrans);
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 0px;
+    color: var(--lightPink);
+    text-shadow: 6px 6px 6px rgba(255, 255, 255, 0.473);
+}
+
+.formulario {
+    padding: 70px;
+    color: var(--lightPink);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.text {
+    margin: 30px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#name, 
+#mail,
+#messagge {
+    width: 600px;
+    height: 30px;
+    background-color: var(--lightPinkTrans);
+    border-radius: 0.5rem;
+    margin: 15px;
+    text-align: center;
+    color: var(--solidPink);
+    box-shadow: 0px 6px 6px rgba(255, 255, 255, 0.25);
+    border: 2px solid var(--lightPink);
+}
+
+#messagge {
+    min-height: 120px;
+    display: flex;
+    padding: 10px;
+}
+
+#name:focus, 
+#mail:focus,
+ #messagge:focus {
+    background-color: rgba(240, 248, 255, 0.61);
+
+ }
+
+::placeholder {
+    color: var(--blueTrans);
+    text-align: center;
+    display: flex;
+}
+
+button {
+    width: 600px;
+    height: 40px;
+    margin: 15px;
+    border-radius: 1rem;
+    background-color: var(--lightPinkTrans);
+    border: 2px solid var(--blueTrans);
+}
+
+button:hover {
+    background-color: var(--bgPink);
+    border-color: var(--solidPink);
+    box-shadow: 8px 8px 8px rgba(255, 255, 255, 0.349);
+}
+
+
+/*/////////////////////// REDES /////////////////////*/
+
+
+.redes {
+    right: 40px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.redes-icon {
+    width: 60px;
+    margin-top: 10px;
+}
+
+.redes-icon:hover {
+    box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.349);
+}
+
+.red { 
+    display: flex;
+    font-size: 20px;
+    color: var(--lightPink);
+    margin-bottom: 60px;
+    font-weight: 600;
+}
+
+.red:hover {
+    color: var(--solidPink);
+    
+}
+
+
+/*///////////////////////////////////////////*/
+
+footer {
+    color: var(--lightPink);
+    display: flex;
+    justify-content: end;
+    text-decoration: none;
+    margin-right: 40px;
+    padding: 20px;
+}
+
+@media(max-width:400px) {
+    .box {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .project { 
+        max-width: 400px;
+        height: 25%;
+    }
+    .redes {
+        flex-wrap: wrap;
+    }  
+    #name, 
+    #mail,
+    #messagge {
+        width: 350px; 
+    }
+    button {
+        width: 350px;
+    }
+}
