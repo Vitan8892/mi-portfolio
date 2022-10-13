@@ -15,7 +15,7 @@
 
 html, 
 body {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-image: url(./Images/bg2.png);
 }
@@ -37,6 +37,7 @@ nav {
 .bar { 
     width: 25px;
     padding-top: 5px;
+    transition: .3s ease-in-out ;
 }
 
 .bar:hover {
@@ -46,7 +47,7 @@ nav {
 #contenedor-home {
    
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -147,6 +148,7 @@ h1 {
     background-color: var(--bgPink);
     color: azure;
     text-shadow: rgb(255, 0, 179) 1px 0 10px;
+    user-select: none;
 }
 .Tproject {
     display: flex;
@@ -167,20 +169,21 @@ h1 {
 .project { 
     min-width: 320px;
     max-width: 700px;
-    width: 25%;
+    width: 20%;
     height: 800px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 30px;
     position: relative;
-    /*overflow: hidden;*/
+    overflow: hidden;
     filter: blur(5px);
-    -webkit-filter: blur(5px);
     border: 1px solid var(--solidPink); 
-    
+    transition: width .3s ease-in-out ;
 }
-
+.project.activo{
+    width: 80%;
+}
 .project:hover {
     filter: none;
 }
@@ -302,6 +305,7 @@ h1 {
     color: var(--blueTrans);
     text-align: center;
     display: flex;
+    user-select: none;
 }
 
 button {
@@ -311,6 +315,8 @@ button {
     border-radius: 1rem;
     background-color: var(--lightPinkTrans);
     border: 2px solid var(--blueTrans);
+    color: #FEB9EF;
+    text-shadow: 3px 1  px 3px black;
 }
 
 button:hover {
@@ -371,11 +377,22 @@ footer {
         display: flex;
         flex-wrap: wrap;
     }
-.project { 
-    width: 400px;
-    height: 25%;
-}
-.redes {
- flex-wrap: wrap;
-}
+    .project { 
+        max-width: 400px;
+        height: 20%;
+    } 
+    .project.activo{
+        height: 80%;
+    }    
+    .redes {
+        flex-wrap: wrap;
+    }  
+    #name, 
+    #mail,
+    #messagge {
+        width: 350px; 
+    }
+    button {
+        width: 350px;
+    }
 }

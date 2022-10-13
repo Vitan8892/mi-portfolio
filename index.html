@@ -5,16 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="index.css" rel="styleSheet">
+    <script src="./main.js" defer></script>
     <title>Mi♥Portfolio</title>
 
 </head>
 <body>
     <header>
         <nav>
-            <a href="#contenedor-home"><img src="/Images/home-icon.png" rel="Home icon" class="bar"></a>
-            <a href="#contenedor-aboutMe"><img src="/Images/aboutMe-icon.png" rel="Cloud icon" class="bar"></a>
-            <a href="#contenedor-projects"><img src="/Images/pojects-icon.png" rel="Puzzle token icon" class="bar"></a>
-            <a href="#contenedor-contact"><img src="/Images/contact-icon.png" rel="pc icon" class="bar"></a>
+            <a href="#contenedor-home"><img src="/Images/home-icon.png" rel="Home icon" class="bar">Home</a>
+            <a href="#contenedor-aboutMe"><img src="/Images/aboutMe-icon.png" rel="Cloud icon" class="bar">About Me</a>
+            <a href="#contenedor-projects"><img src="/Images/pojects-icon.png" rel="Puzzle token icon" class="bar">Projects</a>
+            <a href="#contenedor-contact"><img src="/Images/contact-icon.png" rel="pc icon" class="bar">Contact</a>
         </nav>
     </header>
 
@@ -55,32 +56,32 @@
         <div class="aboutMe-curso">
             <h2>Cursos Realizados</h2>
             <ul>Curso 1</ul>
-            <ul>Curso 2</ul>
-            <ul>Curso 3</ul>
-            <ul>Curso 4</ul>
+            <ul>Curso de Java Script y programación en <a href="https://app.edutin.com/">Edutin Academi</a></ul>
+            <ul><a href="https://www.bitdegree.org/user/dashboard/vitan1410834/certificates">Bit Degree Courses</a></ul>
+            <ul><a href="https://www.freecodecamp.org/Vitan">freeCodeCamp</a></ul>
         </div>
 
     </div>
     <div id="contenedor-projects">
         <h1 class="Tproject">My Projects</h1>
        <div class="box">
-        <div class="project memoTest">
+        <div class="project memoTest activo">
             <h1 class="hproject">Memo Test Game</h1>
             <p class="pproject">Play this simple and cute game for your brain, coded with html, CSS and JavaScript, by me and youtube ♥</br>
         Still wroking on it.</p>
-            <a href="#" class="aproject">View more -></a>
+            <a href="./Projects/MemoMiau/Memotest1.html" target="_blank" class="aproject">View more -></a>
         </div>
         <div class="project toDoList">
             <h1 class="hproject">To Do List</h1>
             <p class="pproject">This was a faste project made whith online tutors. </br>
             We use html, CSS and JavaScript.
             </p>
-            <a href="#" class="aproject">View more -></a>
+            <a href="./Projects/ToDoList/Index.html" target="_blank" class="aproject">View more -></a>
         </div>
         <div class="project pokeAPI">
             <h1 class="hproject">Pokémon Number</h1>
             <p class="pproject">Just intro the number of your choise and see which Pokémon is.</p>
-            <a href="#" class="aproject">View more -></a>
+            <a href="./Projects/index poke.html" target="_blank" class="aproject">View more -></a>
         </div>
         <div class="project more">
             <h1 class="hproject">More Projects</h1>
@@ -97,15 +98,17 @@
     <div id="contenedor-contact">
         <h1 class="contact">Contact Me</h1>
         <div class="formulario">
-            <form action="#">
+            <form action="https://formsubmit.co/4dfdd05cad478f38666ec1d0460dd3d7" method="POST">
                 <label for="name" class="text">How I can name you?</label></br>
-                <input id="name" type="text" placeholder="como tu quieras bb"></br>
+                <input id="name" name="Nombre" type="text" placeholder="como tu quieras bb"  required></br>
                 <label for="mail" class="text">Please, let your email</label></br>
-                <input id="mail" type="email" placeholder="example@correocaliente.com"></br>
+                <input id="mail" name="Email" type="email" placeholder="example@correocaliente.com"  required></br>
                 <label for="messagge" class="text">What!?</label></br>
-                <textarea id="messagge" type="text" class="messagge" placeholder="Write what u want"></textarea></br>
+                <input id="messagge" type="text" class="messagge" name="Mensaje" placeholder="Write what u want"  required></input></br>
                 <button type="submit">Send ♥</button>
        
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/">
+                <input type="hidden" name="_captcha" value="false"> 
             </form>
         </div>
         <div class="redes">
